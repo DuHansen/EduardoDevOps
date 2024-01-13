@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo | GN</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+        :root{
+            --color-white: #0a0909;
+            --color-dark1: rgb(39, 39, 39);
+            --color-dark2: #2d2d2d;
+            --color-dark3: #414141;
+            --color-dark4: #1c1c1c;
+            --color-dark5: #343434;
+            --color-purple: #fff;
+            --cor-fundo: #251c1c;
+            --cor-principal: #fff;
+            --cor-secundario: #212121;
+            --cor-fonte: #fff;
+            --cor-linha-tabela: #212121;
+            --cor-amarela: #83f1ea;
+            --cor-instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: sans-serif;
+           
+            
+           
+
+        }
+        .home h1{
+            color: linear-gradient(to right, #FFFFFF, #FFD700);
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .header{
+            position: fixed; /* Adicionado para fixar o menu no topo */
+            width: 80%; /* Adicionado para garantir que o menu ocupe toda a largura da página */
+            top: 0; /* Adicionado para fixar o menu no topo da página */
+            background-color: var(--color-dark2);
+            justify-content: space-between;
+            padding: 0 10%;
+            z-index: 1;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 3s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-purple);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-dark3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: fixed;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+        /*Princial*/
+.principal{
+   
+    background-color: var(--cor-principal);
+    height: 100%;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+#sobre{ 
+    padding: 5% 10%;
+    
+}
+#home{
+    padding: 0 10%;
+    height: 110vh;
+    background-image: url('./img/Frame 169.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+   #home img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+#home h1{
+    background: linear-gradient(to right, #FFFFFF, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+#contato{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 25px;
+    background: #fff;
+    color: #fff;
+}
+
+.tecnica, .pessoal, .profissional, .educacao, .certificacao, .projetos, .idioma{
+    padding: 10px 0px 20px 0px;
+}
+
+.titulo{
+    background-color: var(--cor-secundario);
+    color: var(--cor-fonte);
+    border: 3px var(--cor-secundario);
+    border-radius: 15px;
+    font-family: 'Molli', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.tecnico ul, .profissional ul, .certificação ul, .educacao ul, .tecnica ul, .pessoal ul{
+    padding: 15px 0px 15px 50px;
+}
+
+.educacao a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.pessoal al{
+    padding: 15px 0px 15px 50px;
+}
+
+table{
+    width: 100%;
+    margin-top: 5vh;
+    border-color: #000000;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: var(--cor-secundario);
+}
+
+thead th:nth-child(1) {
+    width: 18%;
+}
+
+thead th:nth-child(2) {
+    width: 18%;
+}
+
+thead th:nth-child(3) {
+    width: 28%;
+}
+
+thead th:nth-child(4) {
+    width: 18%;
+}
+
+thead th:nth-child(5) {
+    width: 18%;
+}
+
+thead{
+    color: var(--cor-fonte);
+}
+th, td {
+    padding: 5px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--cor-principal);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cor-secundario);
+    color: #fff;
+}
+
+.imagem {
+    margin: 5px 15px 5px 10px;
+}
+.box{
+    width: 65px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0.2rem;
+    
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.box:hover{
+    width: 200px;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    border-radius: 35px;
+    color: #fff;
+    box-shadow: 0 0 50px var(--cor-instagram);
+}
+.box:nth-child(2):hover{
+    background: #25d366;
+    box-shadow: 0 0 50px #25d3657e;
+}
+.box:nth-child(3):hover{
+    background: #1877f2;
+    box-shadow: 0 0 50px #1876f285;
+}
+.box:nth-child(4):hover{
+    background: #fff;
+    color: #2d2d2d;
+    box-shadow: 0 0 50px #2d2d2d;
+}
+.navbar{
+    display: flex;
+}
+.navbar p{
+    transform: translate(60px);
+}
+.box .icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all .4s ease;
+}
+.instagram{
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.whatsapp{
+    background-color: #25d366;
+}
+.facebook{
+    background-color: #1877f2;
+}
+.github{
+    background-color: #fff;
+    
+}
+
+.box:hover .icon{
+    background: #fff;
+    color: #3b3b3b;
+    box-shadow: 0 0 20px rgba(0,0,0,0.26);
+}
+</style>
+</head>
+<body id="body">
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <img src="img/Ellipse 13.png" alt="Logo GN" class="img_logo_header">
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </div>
+    <main class="principal">
+    <section id = "home">
+        <img src="./img/Frame 169.png" alt="Background">
+        <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+            <h1>Eduardo Hansen</h1>
+        </div>
+    </section>
+   
+    <section id ="sobre">
+        <section class = "tecnica">
+            <div class = "titulo">
+                <img class = "imagem" src = "./img/foguete.svg " alt="Tecnicas" width="40" height="40">
+                <h2>Habilidades técnicas</h2>
+            </div>
+        <ul>
+            <li><strong>Linguagens:</strong> Java, JavaScript</li>
+            <li><strong>Front-end:</strong> React, Angular, HTML, CSS, Bootstrap</li>
+            <li><strong>Back-end:</strong> Spring, Spring Boot</li>
+            <li><strong>Banco de dados:</strong> Mysql, Oracle</li>
+            <li><strong>Versionamento:</strong> Git</li>
+            <li><strong>Metodologias:</strong> Scrum, Agile, Cascata</li>
+            <li><strong>Testes:</strong> QA com uso de Selenium e Junit</li>
+            <li><strong>Desenvolvimento:</strong> Aplicativos Web e Mobile</li>
+        </ul>
+    </section>
+
+    <section class= "pessoal">
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/emprego.svg" alt="profissional" width="40" height="40">
+            <h2>Habilidades pessoais</h2>
+        </div>
+        <ul>
+            <li>Resolução de problemas</li>
+            <li>Trabalho em equipe</li>
+            <li>Adaptabilidade e novas tecnologias</li>
+            <li>Raciocinio lógico</li>
+        </ul>
+    </section>
+    <section class = "profissional">
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/emprego.svg" alt="profissional" width="40" height="40">
+            <h2>Experiência profissional</h2>
+        </div>
+        <P><strong> Telemarketing | Empresa lbv | Florianópolis-SC</strong></P>
+        <ul>
+            <li>Responsável por realizar contatos proativos, estabelecer conexões e apresentar os serviços aos clientes em potencial.</li>
+            <br>
+            <li>Criação e aprimoramento de scripts de vendas, adaptados às necessidades específicas do mercado e alinhados com os valores da LBV.</li>
+        </ul>
+
+
+    </section>
+    <section class="educacao">
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/educacao.svg" alt="Educação" width="40" height="40">
+            <h2>Educação</h2>
+        </div>
+        
+            <p><strong>SENAC - Centro, Florianópolis-SC</strong></p>
+            <ul>
+                <a href="https://www.sc.senac.br/matrizcurricular/curso/curso-superior-de-tecnologia-em-analise-e-desenvolvimento-de-sistemas-2023"><li>Análise e Desenvolvimento de Sistemas | 2023 - Curso Atual</li></a>
+            </ul>
+        
+            <p><strong>IFSC - Instituto Federal de Santa Catarina</strong></p>
+            <ul>
+                <li>Engenharia Elétrica | 2019 - 2022</li>
+            </ul>
+       
+    <section class="certificação">
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/certificado (1).svg " alt="certificação" width="35" height="35">
+            <h2>Certificações</h2>
+        </div>
+        <ul>
+            <li>Oracle certificaed</li>
+        </ul>
+    </section>
+    <section class = "projetos"> 
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/ideia (1).svg" alt="Projetos" width="40" height="40">
+            <h2>Projetos pessoais</h2>
+        </div>
+        <ul>
+            <li>Sistema de gerenciamento financeiro</li>
+        </ul>
+    </section>
+    <section class = "idioma">
+        <div class = "titulo">
+            <img class = "imagem" src = "./img/idioma.svg" alt = "Idiomas" width="40" height="40">
+            <h2>Idiomas</h2>
+        </div>
+        <table border = 1>
+            <thead>
+                <tr>
+                    <th>Idioma</th>
+                    <th>Básico</th>
+                    <th>Intermediario</th>
+                    <th>Avançado</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inglês</td>
+                    <td></td>
+                    <td></td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Português</td>
+                    <td></td>
+                    <td></td>
+                    <td>x</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+    </section>
+    <section id = "contato">
+        <div class="navbar">
+            <div class="box" onclick="location.href='https://www.instagram.com/eduardohansen.dev/';">
+                <div class="icon instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+                <p>Instagram</p>
+            </div>
+            
+            <div class="box" onclick="location.href=' https://api.whatsapp.com/send?phone=47991518118';">
+                <div class="icon whatsapp">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <p>Whatsapp</p>
+            </div>
+    
+            <div class="box" onclick="location.href='https://www.facebook.com/eduardo.eduardohansen';">
+                <div class="icon facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </div>
+                <p>Facebook</p>
+            </div>
+            
+            <div class="box" onclick="location.href='https://github.com/DuHansen';">
+                <div class="icon github">
+                    <img class="git" src="img/github-mark.png" alt="GitHub" width="50px" height="50px">
+                </div>
+                <p>GitHub</p>
+            </div>
+            
+            
+        </div>
+    </section>
+</main>
+<foot>
+
+</foot>
+</body>
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+    document.addEventListener('DOMContentLoaded', (event) => {
+    // Seu código JavaScript aqui
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+});
+    window.onload = function() {
+    var divBoxes = document.querySelectorAll('.box');
+    divBoxes.forEach(function(divBox) {
+        document.addEventListener('DOMContentLoaded', (event) => {
+        divBox.addEventListener('click', function() {
+            window.location.href = this.getAttribute('onclick').split("'")[1];
+        });
+    });
+});
+};
+
+// Primeiro, selecione todos os links no cabeçalho
+let links = document.querySelectorAll('.navigation_header a');
+
+// Em seguida, adicione um evento de clique a cada link
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Seu código JavaScript aqui
+
+
+for (let i = 0; i < links.length; i++) {
+    
+    links[i].addEventListener('click', smoothScroll);
+}});
+
+// Função para rolagem suave
+function smoothScroll(event) {
+    event.preventDefault(); // Impede o comportamento padrão do clique
+    let targetId = event.currentTarget.getAttribute('href'); // Pega o valor do atributo href do link clicado
+    let targetPosition = document.querySelector(targetId).offsetTop; // Pega a posição do topo da seção alvo
+    let startPosition = window.pageYOffset; // Pega a posição atual da janela
+    let distance = targetPosition - startPosition; // Calcula a distância a ser percorrida
+    let duration = 1000; // Define a duração da animação em milissegundos
+    let start = null;
+
+    // Função para animar a rolagem
+    function animation(currentTime) {
+        if (start === null) start = currentTime;
+        let timeElapsed = currentTime - start;
+        let run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Função para criar o efeito de 'ease' na animação
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    // Inicia a animação
+    requestAnimationFrame(animation);
+}
+
+ScrollReveal().reveal('.content', { origin: 'left', distance: '100px', scale: 0.9, delay: 200 });
+ScrollReveal().reveal('.tecnica', { origin: 'right', distance: '100px', scale: 0.9, delay: 200 });
+ScrollReveal().reveal('.pessoal', { origin: 'left', distance: '100px', scale: 0.9, delay: 200 });
+ScrollReveal().reveal('.profissional', { origin: 'right', distance: '100px', scale: 0.9, delay: 200 });
+ScrollReveal().reveal('.educacao', { origin: 'left', distance: '100px', scale: 0.9, delay: 200});
+ScrollReveal().reveal('.certificação', { origin: 'right', distance: '100px', scale: 0.9, delay: 200});
+ScrollReveal().reveal('.projetos', { origin: 'left', distance: '100px', scale: 0.9, delay: 200});
+ScrollReveal().reveal('.idioma', { origin: 'right', distance: '100px', scale: 0.9, delay: 200});
+ScrollReveal().reveal('.contato', { origin: 'left', distance: '100px', scale: 0.9, delay: 200});
+// Adicione mais seletores conforme necessário
+
+// Adicione mais seletores conforme necessário
+
+</script>
+</html>
