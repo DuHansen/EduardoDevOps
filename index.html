@@ -8,6 +8,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body id="body">
     <div class="header" id="header">
@@ -25,9 +26,10 @@
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                 </svg>
             </button>
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
+            <button onclick="window.location.href='#home'">Home</button>
+            <button onclick="window.location.href='#sobre'">Sobre</button>
+            <button onclick="window.location.href='#contato'">Contato</button>
+            
         </div>
     </div>
     <main class="principal">
@@ -121,6 +123,7 @@
             <img class = "imagem" src = "./img/idioma.svg" alt = "Idiomas" width="40" height="40">
             <h2>Idiomas</h2>
         </div>
+        <div class="table-container">
         <table border = 1>
             <thead>
                 <tr>
@@ -144,12 +147,13 @@
                     <td></td>
                     <td>x</td>
                 </tr>
-
             </tbody>
         </table>
+    </div>
     </section>
-    </section>
+
     <section id = "contato">
+        
         <div class="navbar">
             <div class="box" onclick="location.href='https://www.instagram.com/eduardohansen.dev/';">
                 <div class="icon instagram">
@@ -182,10 +186,58 @@
             
         </div>
     </section>
+    <section class="mapa">
+        <h1>Endereço</h1>
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var minhaLocalizacao = {lat: -27.59218406677246, lng: -48.54499816894531};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: minhaLocalizacao
+            });
+            var marker = new google.maps.Marker({
+              position: minhaLocalizacao,
+              map: map
+            });
+          }
+        </script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp0UkMkdwv-Pqg3T6QuTBcFisadgAVRnw&callback=initMap">
+        </script>
+    </section>
 </main>
-<foot>
-
-</foot>
+<footer>
+    <div class="footer-wrap">
+        <div class="container first_class">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <h3>BE THE FIRST TO KNOW</h3>
+                    <p>Get all the latest information on examples of Services, Events, Jobs. Get in touch today.</p>
+                </div>
+            </div>
+        </div>
+        <div class="company-info">
+            <div class="container company-info_bdr">
+               
+                    <div class="col-md-2 col-sm-6">
+                        <h3>Quick LInks</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a>
+                            </li>
+                            <li><a href="#sobre">About</a>
+                            </li>
+                            <li><a href="https://github.com/DuHansen">Project</a>
+                            </li>
+                            <li><a href="#contato">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"> Copyright 2024 | Eduardo Hansen</div>
+</footer>
 </body>
 <script>
     var header           = document.getElementById('header');
