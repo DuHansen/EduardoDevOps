@@ -21,7 +21,6 @@
 }
 body{
     background-color: var(--cor-principal);
-    width: 100%;
     font-family: 'Inclusive Sans', sans-serif;
 }
 .home h1{
