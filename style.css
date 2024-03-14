@@ -20,7 +20,9 @@
     padding: 0;
 }
 body{
-    font-family: sans-serif;
+    background-color: var(--cor-principal);
+    
+    font-family: 'Inclusive Sans', sans-serif;
 }
 .home h1{
     color: linear-gradient(to right, #FFFFFF, #FFD700);
@@ -36,11 +38,13 @@ body{
 }
 .header{
     position: fixed; /* Adicionado para fixar o menu no topo */
-    width: 80%; /* Adicionado para garantir que o menu ocupe toda a largura da página */
+    width: 100%; /* Adicionado para garantir que o menu ocupe toda a largura da página */
     top: 0; /* Adicionado para fixar o menu no topo da página */
+    box-sizing: border-box;
+    margin-right: 0;
     background-color: var(--color-dark2);
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0% 10%;
     z-index: 1;
     height: 3.5em;
     box-shadow: 1px 1px 4px var(--color-dark4);
@@ -55,7 +59,6 @@ body{
     height: 100vh;
     transition: 3s;
 }
-
 
 .navigation_header button {
     border: #000000;
@@ -109,23 +112,27 @@ body{
     to {margin-left: -10vw;}
 }
 /*Princial*/
-.principal{
-
-background-color: var(--cor-principal);
-height: 100%;
-font-family: 'Inclusive Sans', sans-serif;
-}
 #sobre{
-padding: 5% 10%;
-
+box-sizing: border-box;
+z-index: 4;
+padding: 0% 10%;
+}
+footer{
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    background: #262533;
 }
 #home{
 height: 100%;
+box-sizing: border-box;
 background-image: url('./img/Frame 169.png');
 background-repeat: no-repeat;
 background-size: cover;
-
+margin-right: 0;
+padding: 0;
 }
+
 #home img {
     position: absolute;
     top: 0;
@@ -146,7 +153,6 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
 font-size: 25px;
 background: #fff;
 color: #fff;
@@ -166,7 +172,7 @@ display: flex;
 align-items: center;
 }
 
-.tecnico ul, .profissional ul, .certificação ul, .educacao ul, .tecnica ul, .pessoal ul{
+.tecnico ul, .profissional ul, .certificação ul, .educacao ul, .tecnica ul, .pessoal ul, .projetos ul{
 padding: 15px 0px 15px 50px;
 }
 
@@ -191,6 +197,7 @@ border-color: #000000;
 table-layout: fixed;
 border-collapse: collapse;
 background-color: var(--cor-secundario);
+
 }
 
 thead th:nth-child(1) {
@@ -214,7 +221,7 @@ width: 18%;
 }
 
 thead{
-color: var(--cor-fonte);
+color: var(--cor-principal)
 }
 th, td {
 padding: 5px;
@@ -233,85 +240,28 @@ background-color: var(--cor-secundario);
 color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+    tbody td{
+        font-size: 10px;
+       
+    }
+    thead th{
+      font-size: 12px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
 .imagem {
 margin: 5px 15px 5px 10px;
 }
-.box{
-width: 65px;
-height: 68px;
-display: flex;
-align-items: center;
-padding: 5px;
-margin: 0.2rem;
 
-position: relative;
-overflow: hidden;
-cursor: pointer;
-transition: all .4s ease;
-}
-.box:hover{
-width: 200px;
-background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-border-radius: 35px;
-color: #fff;
-box-shadow: 0 0 50px var(--cor-instagram);
-}
-.box:nth-child(2):hover{
-background: #25d366;
-box-shadow: 0 0 50px #25d3657e;
-}
-.box:nth-child(3):hover{
-background: #1877f2;
-box-shadow: 0 0 50px #1876f285;
-}
-.box:nth-child(4):hover{
-background: #fff;
-color: #2d2d2d;
-box-shadow: 0 0 50px #2d2d2d;
-}
-.navbar{
-display: flex;
-}
-.navbar p{
-transform: translate(60px);
-}
-.box .icon{
-position: absolute;
-width: 50px;
-height: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
-color: #fff;
-border-radius: 50%;
-margin-right: 10px;
-transition: all .4s ease;
-}
-.instagram{
-background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-}
-.whatsapp{
-background-color: #25d366;
-}
-.facebook{
-background-color: #1877f2;
-}
-.github{
-background-color: #fff;
-
-}
-
-.box:hover .icon{
-background: #fff;
-color: #3b3b3b;
-box-shadow: 0 0 20px rgba(0,0,0,0.26);
-}
 
 /*footer*/
 
 
 
 .footer-wrap {
+    
     padding-top: 5rem;
     background-size: cover;
 }
@@ -407,9 +357,6 @@ footer .first_class h3 {
 
 }
 
-footer {
-    background: #262533;
-}
 
 footer .newsletter input[type="text"] {
     width: 100%;
@@ -476,12 +423,110 @@ footer li {
         font-size: 12px;
     }
 }
+.mapa{
+    justify-content: center;
+    height: 100vh;
+    padding: 0% 10%;
+}
+
 #map {
-    height: 400px;
+    height: 50vh;
     width: 100%;
   }
 .mapa h1{
+    margin: 5vh;
+    margin-top: 20vh;
     text-align: center;
     color: #000000;
-    margin: 10%;
+    padding-bottom: 10px;
   }
+
+  /*Contato*/
+    #contato{
+        background-color: #1c1c1c;
+        height: 70vh;
+
+    }
+  .quadro{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #212121;
+    background-color: #FFFFFF;
+    padding: 0% 5% 0% 5%;
+    border-radius: 8px;
+    height: 50%;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.5);
+  
+  }
+
+ .titulo-quadro{
+    margin-top: 16px;
+ }
+
+ .box-contato {
+    padding-right: 20px;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para cada caixa de contato */
+.box-whats,
+.box-instagram,
+.box-git,
+.box-face {
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicione ícones ou conteúdo específico aqui */
+}
+
+/* Exemplo de ícone usando font-awesome (substitua pelo seu próprio conteúdo) */
+.box-whats{
+    color: #FFFFFF;
+    background-color: #25d366;
+}
+
+.box-face{
+    color: #FFFFFF;
+    background-color: #1877f2;
+}
+
+.box-instagram{
+    color: #FFFFFF;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.box-git{
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .quadro{
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+        width: 230px;
+        border-color: 5px var(--color-white);
+    }
+    .box-contato{
+        width: 230px;
+        align-items: center;
+    }
+    .box-whats,
+    .box-instagram,
+    .box-git,
+    .box-face{
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+}
