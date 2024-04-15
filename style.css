@@ -145,6 +145,7 @@ overflow: "hidden";
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    overflow: "hidden";
 }
 #home h1{
 background: linear-gradient(to right, #FFFFFF, #FFD700);
