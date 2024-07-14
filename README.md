@@ -1,6 +1,22 @@
-## Olá eu sou a Eduardo Hansen, desenvolvedor de sistemas para a web!
+## Welcome to my Github 
+Olá eu sou a Eduardo Hansen, desenvolvedor de sistemas para a web!
 
+## 👨🏻‍💻 About me 
+✈ I love technology and innovation <br>
+💼 Intern at the company @TeuCliente <br>
+🎓 I like to validate my questions <br>
+👨‍🎓 Student at @senacsc 
 
+## 🛠 Technologies under study 
+🛢 MySQL | MongoDB <br> 
+💻 C | Java | Nodejs<br>
+🔧 Visual Studio Code | Git <br>
+🌐 HTML | CSS | JavaScript | NodeJS | React | SASS
+<br>
+<div>
+  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,react,js,html,css,cpp,sass" alt="languages">
+</div>
+<br>
 
 <div style="display: inline_block"><br>
   <img align="center" alt="Edu-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
