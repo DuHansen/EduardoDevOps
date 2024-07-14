@@ -14,7 +14,7 @@
 🌐 HTML | CSS | JavaScript | NodeJS | React | SASS
 <br>
 <div>
-  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,c" alt="languages">
+  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,ts" alt="languages">
 </div>
 <br>
 
