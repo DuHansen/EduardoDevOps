@@ -1,5 +1,5 @@
 ## Welcome to my Github 
-Olá eu sou a Eduardo Hansen, desenvolvedor de sistemas para a web!
+#Olá eu sou a Eduardo Hansen, desenvolvedor de sistemas para a web!
 
 ## 👨🏻‍💻 About me 
 ✈ I love technology and innovation <br>
@@ -14,7 +14,7 @@ Olá eu sou a Eduardo Hansen, desenvolvedor de sistemas para a web!
 🌐 HTML | CSS | JavaScript | NodeJS | React | SASS
 <br>
 <div>
-  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,react,js,html,css,cpp,sass" alt="languages">
+  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,js,html,css,cpp,sass" alt="languages">
 </div>
 <br>
 
