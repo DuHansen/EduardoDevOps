@@ -11,10 +11,10 @@
 🛢 MySQL | MongoDB <br> 
 💻 C | Java | Nodejs<br>
 🔧 Visual Studio Code | Git <br>
-🌐 HTML | CSS | JavaScript | NodeJS | React | SASS
+🌐 HTML | CSS | JavaScript | NodeJS
 <br>
 <div>
-  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql,ts" alt="languages">
+  <img src="https://skillicons.dev/icons?i=java,nodejs,mysql" alt="languages">
 </div>
 <br>
 
