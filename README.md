@@ -11,7 +11,7 @@
 🛢 MySQL | MongoDB <br> 
 💻 C | Java | Nodejs<br>
 🔧 Visual Studio Code | Git <br>
-🌐 HTML | CSS | JavaScript | NodeJS
+🌐 SQL | Java | NodeJS
 <br>
 <div>
   <img src="https://skillicons.dev/icons?i=java,nodejs,mysql" alt="languages">
